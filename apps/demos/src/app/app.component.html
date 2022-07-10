@@ -1,1 +1,6 @@
-<rx-directives-nx-welcome></rx-directives-nx-welcome>
+<p *ngIf="exist"
+   [rxClass]="cssClasses$">Hello</p>
+
+<button (click)="toggleParagraph()">{{ exist ? 'Remove' : 'Add' }} p</button>
+<button (click)="addClass()">Add Class</button>
+<button (click)="removeClass()">Remove Class</button>

@@ -14,7 +14,17 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@rx-directives/directives": ["libs/directives/src/index.ts"],
+      "@rx-directives/directives/rx-class": [
+        "libs/directives/rx-class/src/index.ts"
+      ],
+      "@rx-directives/util": ["libs/util/src/index.ts"],
+      "@rx-directives/util/base-component": [
+        "libs/util/base-component/src/index.ts"
+      ],
+      "@rx-directives/util/tap-once": ["libs/util/tap-once/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

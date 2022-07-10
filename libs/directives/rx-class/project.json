@@ -1,0 +1,41 @@
+{
+  "projectType": "library",
+  "sourceRoot": "libs/directives/rx-class/src",
+  "prefix": "rx-directives",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:ng-packagr-lite",
+      "outputs": ["dist/libs/directives/rx-class"],
+      "options": {
+        "project": "libs/directives/rx-class/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/directives/rx-class/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/directives/rx-class/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/directives/rx-class"],
+      "options": {
+        "jestConfig": "libs/directives/rx-class/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/directives/rx-class/**/*.ts",
+          "libs/directives/rx-class/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

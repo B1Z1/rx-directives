@@ -1,0 +1,33 @@
+{
+  "projectType": "library",
+  "sourceRoot": "libs/directives/src",
+  "prefix": "rx-directives",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:ng-packagr-lite",
+      "outputs": ["dist/libs/directives"],
+      "options": {
+        "project": "libs/directives/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/directives/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/directives/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/directives/**/*.ts",
+          "libs/directives/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}
